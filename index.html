@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ada Pertanyaan Nih 💗</title>
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:Arial,sans-serif;
+  background:linear-gradient(135deg,#ffd6e7,#ffeef5);
+  overflow:hidden;
+}
+.card{
+  width:min(90%,500px);
+  text-align:center;
+  background:#fff;
+  padding:35px 20px;
+  border-radius:25px;
+  box-shadow:0 15px 50px #d85b8a33;
+}
+.emoji{font-size:65px}
+h1{color:#d6336c}
+p{color:#666;line-height:1.5}
+.area{
+  position:relative;
+  height:150px;
+  margin-top:20px;
+}
+button{
+  border:0;
+  padding:15px 28px;
+  border-radius:999px;
+  font-size:17px;
+  font-weight:bold;
+  cursor:pointer;
+}
+#yes{
+  background:#e83e75;
+  color:white;
+  margin-right:15px;
+}
+#no{
+  background:#eee;
+  color:#444;
+  position:absolute;
+}
+#result{
+  display:none;
+}
+</style>
+</head>
+<body>
+
+<div class="card" id="question">
+  <div class="emoji">🌷</div>
+  <h1>Aku mau ngomong sesuatu...</h1>
+
+  <p>
+    Mungkin agak malu ngomong langsung 😭<br><br>
+    Tapi aku suka sama kamu.<br>
+    Kamu mau nggak jadi orang spesial buat aku? 💗
+  </p>
+
+  <div class="area" id="area">
+    <button id="yes">Mau 💗</button>
+    <button id="no">Nggak 😭</button>
+  </div>
+</div>
+
+<div class="card" id="result">
+  <div class="emoji">😭💗</div>
+  <h1>ANJAY MAU 😭</h1>
+  <p>
+    Screenshot halaman ini.<br>
+    Sekarang aku yang malu sendiri 🗿
+  </p>
+</div>
+
+<script>
+const no = document.getElementById("no");
+const yes = document.getElementById("yes");
+const area = document.getElementById("area");
+
+let kabur = 0;
+
+function lari(){
+  if(kabur >= 4){
+    no.textContent = "Oke, serius: Nggak";
+    return;
+  }
+
+  kabur++;
+
+  const maxX =
